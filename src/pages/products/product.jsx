@@ -905,7 +905,21 @@ const Product = () => {
             dil === "tm" ? "Agramy" : dil === "ru" ? "Massa" : "Massa"
           }
         />
-
+        <div className="flex gap-3 mb-4 justify-start items-start w-full cursor-pointer select-none">
+          <input
+            type="checkbox"
+            id="on_hand"
+            name="on_hand"
+            className="w-[20px] h-[20px]"
+            checked={product.on_hand}
+            onClick={() =>
+              setProduct({ ...product, is_selected: !product.on_hand })
+            }
+          />
+          <label className="cursor-pointer" htmlFor="on_hand">
+            Haryt Elinizdemi?
+          </label>
+        </div>
         <div className="flex gap-3 mb-4 justify-start items-start w-full cursor-pointer select-none">
           <input
             type="checkbox"
@@ -1260,6 +1274,21 @@ const Product = () => {
           }
         />
 
+        <div className="flex gap-3 mb-4 justify-start items-start w-full cursor-pointer select-none">
+          <input
+            type="checkbox"
+            id="on_hand"
+            name="on_hand"
+            className="w-[20px] h-[20px]"
+            checked={product.on_hand}
+            onClick={() =>
+              setProduct({ ...product, is_selected: !product.on_hand })
+            }
+          />
+          <label className="cursor-pointer" htmlFor="on_hand">
+            Haryt Elinizdemi?
+          </label>
+        </div>
         <div className="flex gap-3 mb-4 justify-start items-start w-full cursor-pointer select-none">
           <input
             type="checkbox"
